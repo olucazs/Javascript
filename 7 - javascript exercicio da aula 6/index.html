@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios | alert, confirm e prompt</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    alert("Vamos fazer um calculo básico?")
+    const querCalcular = confirm("Clique em OK para Sim, e CANCELAR para Não")
+    if (querCalcular){
+        const portugues = Number(prompt("Qual sua ultima nota em portugues?"));
+        const matematica = Number(prompt("Sua ultima nota em matematica?"));
+        const historia = Number(prompt("E em história?"));
+        const sum = portugues + matematica + historia;
+        const media = sum/3;
+        alert(`Sendo suas notas: Portugues = ${portugues}, Matematica = ${matematica} e Historia = ${historia}. Sua média é = ${media.toFixed(2)}`);
+    } else{
+        alert("Tudo bem, até a próxima!")
+    }
+</script>
+</html>
