@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window alert, confirm e prompt</title>
+</head>
+<body>
+    <h1 id="nomeUsuario"></h1>
+</body>
+
+    <script>
+        window.alert('Isso é um alerta!')
+        window.confirm('Isso é o confirm. Serve pra confirmar algo!') // Retorna true se clicar em ok, e false se clicar em cancelar
+        const nome = prompt('Isso é um prompt. Por favor digite seu nome: ')// Caixa de texto
+        document.getElementById('nomeUsuario').innerText = nome;
+    </script>
+</html>
