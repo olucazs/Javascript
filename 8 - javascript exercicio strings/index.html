@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios strings</title>
+</head>
+<body>
+    
+    <script>
+        const nome = prompt('Qual o seu nome completo?');
+        document.body.innerHTML += `<b>Seu nome completo é:</b> ${nome} <br/>`
+        document.body.innerHTML += `<b>Seu nome tem:</b> ${nome.length} letras <br/>`
+        document.body.innerHTML += `<b>A primeira letra do seu nome é:</b> ${nome[0]} <br/>`
+        document.body.innerHTML += `<b>A ultima letra é:</b> ${nome.slice(-1).toLocaleUpperCase()} <br/>`
+        document.body.innerHTML += `<b>Como ele ficaria em letras minusculas:</b> ${nome.toLowerCase()} <br/>`
+        document.body.innerHTML += `<b>E em letras maiusculas:</b> ${nome.toLocaleUpperCase()}`
+    </script>
+</body>
+</html>
