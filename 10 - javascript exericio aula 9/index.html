@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios math</title>
+</head>
+<body>
+    <h1>O número do exercicio é: </h1>
+
+    <p id="raiz">Raiz quadrada:</p>
+    <p id="inteiro">é um número inteiro?:</p>
+    <p id="nan">NaN?:</p>
+    <p id="mathfloor">Arredondado pra baixo:</p>
+    <p id="mathceil">Arredondado pra cima:</p>
+    <p id="decimal">Acrescente duas casas decimais</p>
+</body>
+
+<script>
+
+
+    const numero = Number(prompt("Digite um valor para o texte: "));
+    document.getElementById('raiz').textContent += ` ${Math.sqrt(numero)}`;
+    document.getElementById('inteiro').textContent += ` ${Number.isInteger(numero)}`;
+    document.getElementById('nan').textContent += ` ${Number.isNaN(numero)}`
+    document.getElementById("mathfloor").textContent += ` ${Math.floor(numero)}`;
+    document.getElementById("mathceil").textContent += ` ${Math.ceil(numero)}`;
+    document.getElementById("decimal").textContent += ` ${numero.toFixed(2)}`;
+
+
+</script>
+</html>
