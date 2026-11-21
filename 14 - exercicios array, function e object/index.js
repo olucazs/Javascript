@@ -1,17 +1,27 @@
-const formulario = document.getElementById('formulario')
+function escopo(){
+    const formulario = document.getElementById('formulario');
+    const data = document.getElementById('data');
+    const pessoas = [];
 
-function showData(){
-    event.preventDefault();
+    function showData(evento){
+        evento.preventDefault();
 
-    const pessoa = {
-        nome: document.getElementById('nome').value,
-        idade: document.getElementById('idade').value,
-        peso: document.getElementById('peso').value,
-        altura: document.getElementById('altura').value
+        const nome = document.getElementById('nome');
+        const idade = document.getElementById('idade');
+        const peso = document.getElementById('peso');
+        const altura = document.getElementById('altura');
+
+        pessoas.push({
+            nome: nome.value,
+            idade: idade.value,
+            peso: peso.value,
+            altura: altura.value
+        });
+
+        data.innerHTML += `<p>Nome: ${nome.value}, Idade: ${idade.value}, Peso:  ${peso.value} e altura: ${altura.value}</p>`
     }
 
-    document.getElementById('data').textContent = `Seus dados são: Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, peso: ${pessoa.peso} e por fim a sua altura: ${pessoa.altura} `
-    
+    formulario.addEventListener('submit', showData);
 }
 
-formulario.addEventListener('submit', showData);
+escopo();
